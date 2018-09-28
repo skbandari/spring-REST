@@ -2,9 +2,9 @@ package model;
 
 public class Team {
 
-    private int id;
-    private String name;
-    private int yearEst;
+    public int id;
+    public String name;
+    public int yearEst;
 
     private static int NEXT_ID;
 

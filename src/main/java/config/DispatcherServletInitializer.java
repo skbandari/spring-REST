@@ -1,5 +1,6 @@
 package config;
 
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /*
@@ -16,7 +17,7 @@ public class DispatcherServletInitializer
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class<?>[] { AppContextConfig.class };
+		return new Class<?>[] { AppContextConfig.class, SecurityConfig.class };
 	}
 
 	@Override
@@ -28,5 +29,9 @@ public class DispatcherServletInitializer
 	protected String[] getServletMappings() {
 		return new String[] { "/" };
 	}
+
+
+
+
 
 }
